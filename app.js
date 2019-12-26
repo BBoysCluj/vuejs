@@ -1,26 +1,13 @@
-var One = new Vue({
-    el:'#vue-app-one', 
-    data:{
-        title: 'Vue App One'
-   },
-    computed: {
-        greet: function (){
-            return 'Hello from App 1';
-        },
-    }
-});
-
-var Two = new Vue({
-        el:'#vue-app-two', 
-        data:{
-            title: 'Vue App One'
-        },
-        methods: {
-
-    },
-    computed: {
-        greet: function (){
-            return 'Hello from App 2 dude!';
-        },
-    }
+new Vue({
+	el: "#vue-app",
+	data: {
+		output: "Your fav food"
+	},
+	methods: {
+		readRefs: function() {
+			console.log(this.$refs.test.innerText);
+			this.output = this.$refs.input.value;
+			console.log(this.$refs);
+		}
+	}
 });
